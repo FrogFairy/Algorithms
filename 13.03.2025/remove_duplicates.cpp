@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stack>
 
 
 struct ListNode {
@@ -12,44 +13,40 @@ struct ListNode {
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
+        std::stack<ListNode*> st;
         ListNode* start = nullptr;
-        ListNode* double_prev = nullptr;
-        ListNode* prev = nullptr;
-        ListNode* current = nullptr;
 
         while (head)
         {
-            double_prev = prev;
-            prev = current;
-            if (!start)
+            if (st.empty())
             {
-                start = new ListNode(head->val);
-                current = start;
+                st.push(new ListNode(head->val));
+                start = st.top();
             }
-            if (prev)
+            else
             {
-                if (head->val == prev->val)
+                if (head->val == st.top()->val)
                 {
-                    while (head->val == prev->val)
+                    while (head->val == st.top()->val)
                     {
                         head = head->next;
                         if (!head) break;
                     }
-                    prev = double_prev;
-                    if (prev)
-                        prev->next = nullptr;
-                    current = prev;
-                    if (!prev)
+                    st.pop();
+                    if (!st.empty())
+                        st.top()->next = nullptr;
+                    else
                     {
                         start = nullptr;
                         continue;
                     }
                     if (!head) break;
                 }
-                if (head->val != prev->val)
+                if (head->val != st.top()->val)
                 {
-                    current = new ListNode(head->val);
-                    prev->next = current;
+                    ListNode* cur = new ListNode(head->val);
+                    st.top()->next = cur;
+                    st.push(cur);
                 }
             }
             head = head->next;
