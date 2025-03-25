@@ -1,9 +1,9 @@
 #include "heap.h"
-// #include <iostream>
 
 int solution(std::vector<int>& values)
 {
     if (values.empty()) return 0;
+
     Heap heap;
     for (int el: values)
     {

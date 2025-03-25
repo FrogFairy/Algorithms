@@ -28,6 +28,7 @@ struct Heap
     }
 
     bool empty() { return vec.empty(); }
+    int size() { return vec.size(); }
 };
 
 #endif // HEAP
