@@ -4,7 +4,7 @@ project(mainCpp LANGUAGES CXX)
 
 set(sort sort)
 set(polyline polyline)
-# set(sliding_max sliding_max)
+set(database database)
 
 add_executable(${sort}
                 sort.cpp)
@@ -12,6 +12,5 @@ add_executable(${sort}
 add_executable(${polyline} 
                 polyline.cpp)
 
-# add_executable(${sliding_max} 
-#                 sliding_max.cpp
-#                 heap.cpp)
+add_executable(${database} 
+                database.cpp)
