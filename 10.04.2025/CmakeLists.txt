@@ -3,15 +3,14 @@ cmake_minimum_required(VERSION 3.15)
 project(mainCpp LANGUAGES CXX)
 
 set(sort sort)
-# set(dead_ends dead_ends)
+set(polyline polyline)
 # set(sliding_max sliding_max)
 
 add_executable(${sort}
                 sort.cpp)
 
-# add_executable(${dead_ends} 
-#                 dead_ends.cpp
-#                 heap.cpp)
+add_executable(${polyline} 
+                polyline.cpp)
 
 # add_executable(${sliding_max} 
 #                 sliding_max.cpp
