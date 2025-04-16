@@ -22,7 +22,7 @@ void add_elem(std::vector<int>& heap, int elem, int k)
 std::ostream& operator<< (std::ostream& os, std::vector<int>& vec)
 {
     for (int i = 0; i < vec.size(); ++i)
-        os << vec[i] << std::endl;
+        os << vec[i] << " ";
     return os;
 }
 
