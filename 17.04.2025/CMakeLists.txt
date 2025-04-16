@@ -4,7 +4,7 @@ project(mainCpp LANGUAGES CXX)
 
 set(coeval coeval)
 set(first_k_elems first_k_elems)
-# set(database database)
+set(count_of_inversions count_of_inversions)
 
 add_executable(${coeval}
                 coeval.cpp)
@@ -12,5 +12,5 @@ add_executable(${coeval}
 add_executable(${first_k_elems} 
                 first_k_elems.cpp)
 
-# add_executable(${database} 
-#                 database.cpp)
+add_executable(${count_of_inversions} 
+                count_of_inversions.cpp)
