@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/dasha/algorithms/3_sem/build",
+  "command": "C:\\Users\\dasha\\mingw\\mingw64\\bin\\g++.exe   -g -Wall -Wextra -pedantic -o CMakeFiles\\1_seminar.dir\\1_seminar\\main.cpp.obj -c C:\\Users\\dasha\\algorithms\\3_sem\\1_seminar\\main.cpp",
+  "file": "C:/Users/dasha/algorithms/3_sem/1_seminar/main.cpp",
+  "output": "CMakeFiles/1_seminar.dir/1_seminar/main.cpp.obj"
+}
+]
